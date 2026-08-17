@@ -9,7 +9,6 @@ setTimeout(async () => {
     const page = await browser.newPage();
     await page.goto('http://localhost:5173');
     await page.waitForTimeout(3000);
-    // Take a screenshot of the entire page to see both the calculator and footer
     await page.screenshot({ path: 'visual_logs/footer_ui.webp', fullPage: true });
     await browser.close();
     console.log("SNAPSHOT_SUCCESS");

@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
+import logoImg from '../assets/images/logo.jpg';
 
-// Hardcoded rates mapped to lengths. Client cannot change these.
+// Hardcoded rates mapped to lengths based on Natalia's logic
 const lengthOptions = [
-  { length: 20, capsules: 20, pricePerCapsule: 15 },
-  { length: 30, capsules: 40, pricePerCapsule: 15 },
-  { length: 50, capsules: 60, pricePerCapsule: 15 },
-  { length: 70, capsules: 70, pricePerCapsule: 15 },
+  { length: 40, capsules: 450, pricePerCapsule: 30 },
+  { length: 45, capsules: 400, pricePerCapsule: 30 },
+  { length: 50, capsules: 340, pricePerCapsule: 30 },
+  { length: 55, capsules: 300, pricePerCapsule: 30 },
+  { length: 60, capsules: 270, pricePerCapsule: 30 },
+  { length: 65, capsules: 240, pricePerCapsule: 30 },
+  { length: 70, capsules: 210, pricePerCapsule: 30 },
+  { length: 75, capsules: 180, pricePerCapsule: 30 },
+  { length: 80, capsules: 150, pricePerCapsule: 30 },
 ];
 
 const Calculator: React.FC = () => {
   const [weight, setWeight] = useState<number>(100);
-  const [lengthIdx, setLengthIdx] = useState<number>(1);
+  const [lengthIdx, setLengthIdx] = useState<number>(2); // Default to 50 cm
 
   const selectedOption = lengthOptions[lengthIdx];
   const totalCapsules = Math.round((weight / 100) * selectedOption.capsules);
@@ -22,7 +28,7 @@ const Calculator: React.FC = () => {
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-50"></div>
         
         <div className="flex justify-center mb-8">
-          <img src="/src/assets/images/logo.jpg" alt="Name Studio" className="h-20 object-contain rounded-lg" />
+          <img src={logoImg} alt="Name Studio" className="h-20 object-contain rounded-lg" />
         </div>
         
         <h1 className="text-3xl font-bold text-center mb-8 text-white tracking-wide">
@@ -62,7 +68,7 @@ const Calculator: React.FC = () => {
             <span className="text-xl font-medium text-gray-200">{totalCapsules} шт</span>
           </div>
           <div className="flex justify-between items-end bg-[#111] p-5 rounded-2xl border border-[#d4af37]/30 shadow-inner">
-            <span className="text-gray-400 font-medium">Загальна вартість:</span>
+            <span className="text-gray-400 font-medium">Актуальна вартість:</span>
             <span className="text-4xl font-bold text-[#d4af37]">{totalCost.toLocaleString('uk-UA')} ₴</span>
           </div>
         </div>

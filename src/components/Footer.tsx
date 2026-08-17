@@ -1,10 +1,11 @@
 import React from 'react';
+import logoImg from '../assets/images/logo.jpg';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0a0a0a] py-12 border-t border-[#333] text-center flex flex-col items-center w-full">
       <div className="w-full max-w-lg px-4 flex flex-col items-center justify-center space-y-6">
-        <img src="/src/assets/images/logo.jpg" alt="Name Studio" className="h-16 object-contain rounded-lg opacity-90 hover:opacity-100 transition-opacity" />
+        <img src={logoImg} alt="Name Studio" className="h-16 object-contain rounded-lg opacity-90 hover:opacity-100 transition-opacity" />
         <h2 className="text-[#d4af37] text-xl font-medium tracking-widest uppercase">Name Studio</h2>
         
         <a 
