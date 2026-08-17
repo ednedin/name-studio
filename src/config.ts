@@ -1,3 +1,6 @@
 export const siteConfig = {
-  layout: [{ name: 'Calculator' }]
+  layout: [
+    { name: 'Calculator' },
+    { name: 'Footer' }
+  ]
 };

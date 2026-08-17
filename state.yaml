@@ -5,8 +5,11 @@ sections:
     status: IMPLEMENTED
     active_trajectory:
       - timestamp: "2026-08-17T10:01:00Z"
-        image: "visual_logs/calculator_ui.webp"
+        image: "visual_logs/baseline.webp"
         result: "SUCCESS"
   section_footer:
-    status: PLANNED
-    active_trajectory: []
+    status: REVISING
+    active_trajectory:
+      - timestamp: "2026-08-17T10:38:00Z"
+        image: "visual_logs/footer_ui.webp"
+        result: "SUCCESS"
