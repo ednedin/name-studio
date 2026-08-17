@@ -7,9 +7,9 @@ setTimeout(async () => {
   try {
     const browser = await chromium.launch();
     const page = await browser.newPage();
-    await page.goto('http://localhost:5173');
+    await page.goto('http://localhost:5173/name-studio/');
     await page.waitForTimeout(3000);
-    await page.screenshot({ path: 'visual_logs/footer_ui.webp', fullPage: true });
+    await page.screenshot({ path: 'visual_logs/current_calc.webp', fullPage: false });
     await browser.close();
     console.log("SNAPSHOT_SUCCESS");
   } catch(e) {
@@ -18,4 +18,4 @@ setTimeout(async () => {
     server.kill();
     process.exit(0);
   }
-}, 6000);
+}, 5000);

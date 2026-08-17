@@ -63,14 +63,17 @@ const Calculator: React.FC = () => {
         </div>
 
         <div className="pt-8 mt-8 border-t border-[#333]">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-gray-400 text-sm uppercase tracking-wider">Орієнтовно капсул:</span>
-            <span className="text-xl font-medium text-gray-200">{totalCapsules} шт</span>
+          
+          <div className="flex justify-between items-end bg-[#111] p-5 rounded-2xl border border-[#222] shadow-inner mb-4">
+            <span className="text-gray-400 font-medium">Кількість капсул:</span>
+            <span className="text-3xl font-bold text-white">{totalCapsules} <span className="text-lg text-gray-400 font-normal">шт</span></span>
           </div>
-          <div className="flex justify-between items-end bg-[#111] p-5 rounded-2xl border border-[#d4af37]/30 shadow-inner">
-            <span className="text-gray-400 font-medium">Актуальна вартість:</span>
+
+          <div className="flex justify-between items-end bg-[#111] p-5 rounded-2xl border border-[#d4af37]/50 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+            <span className="text-gray-300 font-medium text-lg">Актуальна вартість:</span>
             <span className="text-4xl font-bold text-[#d4af37]">{totalCost.toLocaleString('uk-UA')} ₴</span>
           </div>
+
         </div>
         
         <p className="text-center text-gray-500 text-xs mt-6">
