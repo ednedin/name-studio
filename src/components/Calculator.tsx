@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 
+// Hardcoded rates mapped to lengths. Client cannot change these.
 const lengthOptions = [
-  { length: 20, capsules: 20 },
-  { length: 30, capsules: 40 },
-  { length: 50, capsules: 60 },
-  { length: 70, capsules: 70 },
+  { length: 20, capsules: 20, pricePerCapsule: 15 },
+  { length: 30, capsules: 40, pricePerCapsule: 15 },
+  { length: 50, capsules: 60, pricePerCapsule: 15 },
+  { length: 70, capsules: 70, pricePerCapsule: 15 },
 ];
 
 const Calculator: React.FC = () => {
   const [weight, setWeight] = useState<number>(100);
   const [lengthIdx, setLengthIdx] = useState<number>(1);
-  const [price, setPrice] = useState<number>(15);
 
   const selectedOption = lengthOptions[lengthIdx];
   const totalCapsules = Math.round((weight / 100) * selectedOption.capsules);
-  const totalCost = totalCapsules * price;
+  const totalCost = totalCapsules * selectedOption.pricePerCapsule;
 
   return (
     <section className="min-h-[100svh] bg-[#0a0a0a] flex flex-col items-center justify-center p-4 sm:p-6 text-white font-sans">
@@ -47,10 +47,10 @@ const Calculator: React.FC = () => {
             </select>
           </div>
 
-          <div className="bg-[#111] p-4 rounded-2xl border border-[#222] focus-within:border-[#d4af37]/50 transition-colors">
-            <label className="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wider">Вартість за капсулу (грн)</label>
+          <div className="bg-[#111] p-4 rounded-2xl border border-[#222] opacity-70">
+            <label className="block text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wider">Вартість за капсулу (фіксована)</label>
             <div className="flex items-center">
-              <input type="number" value={price} onChange={(e) => setPrice(Number(e.target.value))} className="w-full bg-transparent text-2xl font-medium text-white focus:outline-none" />
+              <div className="w-full bg-transparent text-2xl font-medium text-white">{selectedOption.pricePerCapsule}</div>
               <span className="text-gray-500 ml-2">₴</span>
             </div>
           </div>
