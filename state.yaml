@@ -4,8 +4,8 @@ sections:
   section_calculator_ui:
     status: IMPLEMENTED
     active_trajectory:
-      - timestamp: "2026-08-17T10:01:00Z"
-        image: "visual_logs/baseline.webp"
+      - timestamp: "2026-08-17T11:27:00Z"
+        image: "visual_logs/current_calc.webp"
         result: "SUCCESS"
   section_footer:
     status: IMPLEMENTED
