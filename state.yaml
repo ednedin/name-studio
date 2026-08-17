@@ -1,0 +1,12 @@
+global_phase: BUILDER
+project_context: "A web-based interactive calculator for hair extension costs at a beauty studio. Users enter hair weight (grams) and length (cm). The app calculates the required number of capsules (based on a length-to-capsule mapping) and multiplies by the price per capsule to display the total cost. The design should be elegant, clean, and suitable for a beauty salon, featuring the studio's logo."
+sections:
+  section_calculator_ui:
+    status: REVISING
+    active_trajectory:
+      - timestamp: "2026-08-17T10:01:00Z"
+        image: "visual_logs/calculator_ui.webp"
+        result: "SUCCESS"
+  section_footer:
+    status: PLANNED
+    active_trajectory: []
